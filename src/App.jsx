@@ -68,6 +68,7 @@ function App() {
       setNewTask(''); // Clear the input field
       return;
     }
+  
 
     const task = {
       id: Date.now(), // Unique ID based on timestamp
