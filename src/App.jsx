@@ -57,7 +57,17 @@ function App() {
   // Handle form submission to add a new task
   const addTask = (e) => {
     e.preventDefault(); // Prevent page refresh
-    if (newTask.trim() === '') return; // Ignore empty tasks
+    if (newTask.trim() === '' ) return; // Ignore empty tasks
+
+
+    const isDuplicate = todos.some(
+      (todo) => todo.text.toLowerCase() === newTask.trim().toLowerCase()
+    );
+    if (isDuplicate) {
+      alert('This task already exists!'); // Notify user
+      setNewTask(''); // Clear the input field
+      return;
+    }
 
     const task = {
       id: Date.now(), // Unique ID based on timestamp
