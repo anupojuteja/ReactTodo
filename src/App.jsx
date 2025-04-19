@@ -77,7 +77,7 @@ function App() {
     };
 
     setTodos([...todos, task]); // Add new task to the list
-    setNewTask(''); // Clear the input field
+    setNewTask(''); // Clear the input field  ..
   };
 
   return (
