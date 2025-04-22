@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 import axios from "axios";
 
 export default function Pagination() {
@@ -18,6 +18,8 @@ export default function Pagination() {
   const currentItems = products.slice(firstIndex, lastIndex);
 
   const totalPages = Math.ceil(products.length / itemsPerPage);
+// const create = createContext();
+// const PaginationContext = createContext();
 
   return (
     <div>
