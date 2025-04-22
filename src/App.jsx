@@ -16,7 +16,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Pagination />} />
         <Route path="/todos" element={<Todo />} />
-        <Route path="/context" element= {<Parent} />
+        <Route path="/context" element= {<Parent/>} />
       </Routes>
     </div>
   );
