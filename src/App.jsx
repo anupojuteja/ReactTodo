@@ -3,17 +3,20 @@ import React from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import Todo from "./Todo";
 import Pagination from "./Pagination";
+import Parent from "./Context/Parent";
 
 export default function App() {
   return (
     <div className="container mt-4">
       <nav className="mb-3">
-        <Link to="/" className="btn btn-primary me-2">Home</Link>
-        <Link to="/todos" className="btn btn-secondary">Todos</Link>
+      <Link to="/" className="btn btn-primary me-2">Home</Link>
+        <Link to="/todos" className="btn btn-secondary me-2">Todos</Link>
+        <Link to="/context" className="btn btn-success">Context Demo</Link>
       </nav>
       <Routes>
         <Route path="/" element={<Pagination />} />
         <Route path="/todos" element={<Todo />} />
+        <Route path="/context" element= {<Parent} />
       </Routes>
     </div>
   );
