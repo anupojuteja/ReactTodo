@@ -54,7 +54,7 @@ export default function SubChild() {
                   value={newValue}
                   onChange={(e) => setNewValue(e.target.value)}
                 />
-                {/* <button className="btn btn-success btn-sm ms-2" onClick={handleSave}>Save</button> */}
+                <button className="btn btn-info btn-sm ms-2" onClick={handleSave}>Save</button>
               </>
             ) : (
               <>
